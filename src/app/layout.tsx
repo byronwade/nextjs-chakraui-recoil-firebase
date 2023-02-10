@@ -1,24 +1,21 @@
-"use client"
-import './globals.css'
-import { ChakraProvider } from '@chakra-ui/react'
-import { RecoilRoot } from 'recoil';
+"use client";
+import "./globals.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RecoilRoot } from "recoil";
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode;
 }) {
-  return (
-      <html lang="en">
-        <head />
-        <body>
-          <RecoilRoot>
-            <ChakraProvider>
-              {children}
-            </ChakraProvider>
-          </RecoilRoot>
-        </body>
-      </html>
-   
-  )
+	return (
+		<html lang="en">
+			<head />
+			<body>
+				<RecoilRoot>
+					<ChakraProvider>{children}</ChakraProvider>
+				</RecoilRoot>
+			</body>
+		</html>
+	);
 }
